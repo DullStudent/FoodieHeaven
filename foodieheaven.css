@@ -1,0 +1,100 @@
+<style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+
+    body{
+      background: url();
+    }
+
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      background-color: #CBF6FF;
+      font-weight: bold;
+    }
+
+    .navbar input[type=text] {
+      float: left;
+      padding: 6px;
+      border: none;
+      margin-top: 8px;
+      margin-right: 20px;
+      font-size: 17px;
+    }
+  /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 100px}
+
+    #content{
+      background-color: #CBF6FF;
+      margin-top: 100px;
+      text-align: center;
+      padding: 100px;
+
+    }
+
+    #article{
+      font: Bold;
+      background-color: #ffffff;
+      margin-top: 100px;
+    }
+
+    .Today-Foodie {
+      background-color: #ffffff;
+      margin-top: 100px;
+    }
+
+    .Today-Foodie-Video {
+      background-color: #ffffff;
+      margin-top: 100px;
+    }
+
+    #reviews{
+      background-color: #ffffff;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+
+    .button {
+      background-color: #CBF6FF;
+      border: none;
+      color: black;
+      padding: 15px 25px;
+      text-align: center;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: skyblue;
+    }
+
+  /* Set gray background color and 100% height */
+  .sidenav {
+    padding-top: 0px;
+    height: 100%;
+  }
+
+  /* Set black background color, white text and some padding */
+  .footer {
+    background-color: #CBF6FF;
+    color: black;
+    color: black;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* On small screens, set height to 'auto' for sidenav and grid */
+  @media screen and (max-width: 767px) {
+    .sidenav {
+      height: auto;
+      padding: 15px;
+    }
+    .row.content {height:auto;}
+  }
+</style>

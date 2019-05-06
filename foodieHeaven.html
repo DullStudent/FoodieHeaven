@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="foodieheaven.css"/>
+	<script>
+			$(document).ready(function(){
+				$("button").click(function(){
+					$("#content").css("background-color", "lightpink");
+				});
+			});
+	</script>
+
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">FoodieHeaven</a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#article">About</a></li>
+				<li><a href="#FOTW">Recipe of the Week</a></li>
+				<li><a href="foodieHeaven_upload.html">Upload</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<input type="text" placeholder="Search..">
+				<li style="background-color:rgb(52, 236, 135);"><a href="foodieHeaven_login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<main>
+<body>
+<div class="container-fluid text-center">
+	<div class="row content">
+		<div class="col-sm-2 sidenav">
+			<!--<img src="https://marocmama.com/wp-content/uploads/2018/03/Marrakech-Food-Tours-Sidebar-Ad.jpg" alt="ad"> -->
+		</div>
+		<div class="col-sm-8 text-center" id = "content">
+
+			<button>Color Change</button>
+
+			<div id = "article">
+				<h1>Foodieheaven</h1>
+				<p>FoodieHeaven is a website created to spread the wonders of food, look up recipes and their variations, give your own style, and upload one of your own</p>
+			</div>
+			<br>
+			<div id ="FOTW">
+				<div class ="Today-Foodie">
+					<a href="#"><img src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FP5utCp_EhXA%2Fmaxresdefault.jpg&f=1" alt="Click for Text-based recipe" style="width = "420" height="345" "></a>
+					<h2>Food of the Week</h2>
+					<p>This week Most popular food : Japanese Pancake Diffculty Rating = 4</p>
+				</div>
+				<div class ="Today-Foodie-Video">
+					<h2>Video Tutorial</h2>
+					<video width="400" controls>
+  					<source src="Japancake.mp4" type="video/mp4">
+  					Your browser does not support HTML5 video.
+					</video>
+					<p>Video on Japanese Pancake by Tasty</p>
+				</div>
+			</div>
+			<br>
+			<div id = reviews>
+				<h2>Top Voted Reviews</h2>
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					<!-- Carousel indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+					</ol>
+					<!-- Wrapper for carousel items -->
+					<div class="carousel-inner">
+						<div class="item active">
+							<img src="review1.PNG" alt="First Slide" class = "center">
+						</div>
+						<div class="item">
+							<img src="review2.PNG" alt="Second Slide" class = "center">
+						</div>
+						<div class="item">
+							<img src="review3.PNG" alt="Third Slide" class = "center">
+						</div>
+					</div>
+					<!-- Carousel controls -->
+					<a class="carousel-control left" href="#myCarousel" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+					</a>
+					<a class="carousel-control right" href="#myCarousel" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+					</a>
+				</div>
+				<a href="#"><button class="button">Post your review here</button></a>
+			</div>
+			<div class ="feedback">
+				<h3>FeedBack</h3>
+				<textarea maxlength="200" name="comment" form="usrform">Add your suggestion or ideas to better FoodieHeaven...</textarea>
+  				<form id="usrform">
+					<input style="width:20%;" type="text" name="usrname" placeholder="Your Email">
+  				<br>
+  					<input style="width:10%;" type="submit">
+				</form>
+			</div>
+		</div>
+    	<div class="col-sm-2 sidenav">
+    	</div>
+	</div>
+</div>
+
+
+<hr>
+<div class = "footer">
+	<p>Copyright sign</p>
+	<p>Contact us at
+		<ul>
+		<li><!--<a href ="#">-->Twitter</a></li>
+		<li><!--<a href ="#">-->facebook</a></li>
+		<li><!--<a href ="#">-->gmail</a></li>
+		<li><!--<a href ="#">-->something else</a></li>
+		</ul>
+	</p>
+</div>
+</body>
+</main>

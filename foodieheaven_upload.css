@@ -1,0 +1,87 @@
+<style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+
+    body{
+      background: url();
+    }
+
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      background-color: #CBF6FF;
+      font-weight: bold;
+    }
+
+    .navbar input[type=text] {
+      float: left;
+      padding: 6px;
+      border: none;
+      margin-top: 8px;
+      margin-right: 20px;
+      font-size: 17px;
+    }
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+
+    body {font-family: Arial, Helvetica, sans-serif;
+    }
+    * {box-sizing: border-box}
+
+    #content{
+      text-align: center;
+      padding-left: 150px;
+      padding-right: 150px;
+    }
+
+    #recipe{
+      style="border: 6px solid #ccc;
+      border-radius: 1;
+      align-content: center;
+      background-color: lightgreen;
+    }
+
+    #RP {
+      width:300;
+      height:500;
+      padding:10px;
+      border:1px solid #aaaaaa;
+      background-color: green;
+    }
+
+    input[type=email], input[type=textarea] {
+      width: 20%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+    }
+
+    /* Set a style for all buttons */
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 10%
+      opacity: 0.9;
+    }
+
+    button:hover {
+      opacity:1;
+    }
+
+    #events{
+      background-color: orange;
+      padding: 10px;
+    }
+
+    .footer {
+      background-color: #CBF6FF;
+      color: black;
+      padding: 10px;
+      color: black;
+    }
+
+</style>

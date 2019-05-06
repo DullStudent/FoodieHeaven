@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="foodieheaven_upload.css"/>
+	<script>
+		function clickCounter() {
+			if(typeof(Storage) !== "undefined") {
+				if (sessionStorage.clickcount) {
+					sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+				} else {
+					sessionStorage.clickcount = 1;
+				}
+				document.getElementById("result").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+			} else {
+				document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+			}
+		}
+	</script>
+
+<script>
+	function allowDrop(ev) {
+	  ev.preventDefault();
+	}
+
+	function drag(ev) {
+	  ev.dataTransfer.setData("text", ev.target.id);
+	}
+
+	function drop(ev) {
+	  ev.preventDefault();
+	  var data = ev.dataTransfer.getData("text");
+	  ev.target.appendChild(document.getElementById(data));
+	}
+</script>
+
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">FoodieHeaven</a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="foodieHeaven.html">Home</a></li>
+				<li><a href="foodieHeaven.html#article">About</a></li>
+				<li><a href="foodieHeaven.html#FOTW">Recipe of the Week</a></li>
+				<li><a href="foodieHeaven_upload.html">Upload</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<input type="text" placeholder="Search..">
+				<li style="background-color:rgb(52, 236, 135);"><a href="foodieHeaven_login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<main>
+<body>
+	<div id = "content">
+		<div id="recipe">
+		  <h1>How do you want to add it?</h1>
+		  <select>
+		  	<option value="From Template">From Template</option>
+		  	<option value="Empty">From Scratch</option>
+			</select>
+			<hr>
+			<h6>How many are you adding in what formats?</h6>
+			<p>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options</p>
+			<select multiple>
+				<option value="Pictures">Pictures</option>
+				<option value="Videos">Videos</option>
+				<option value="Template">Template</option>
+				<option value="Other">Other</option>
+			</select>
+		  <button>
+		  	submit
+		  </button>
+		</div>
+		<br>
+		<div id = "img">
+			<h4>Choose a Food you like(maybe used against you)</h4>
+			<div id="RP" ondrop="drop(event)" ondragover="allowDrop(event)">Drop Here</div>
+			<br>
+			<img id="drag1" src="Food1.jpg" draggable="true" ondragstart="drag(event)" width="400" height="500">
+			<img id="drag1" src="Food2.jpg" draggable="true" ondragstart="drag(event)" width="400" height="500">
+		</div>
+		<br>
+		<h2>Be the first to see your recipe:</h2>
+			<fourm>
+				<input type="email" name="emailaddress" placeholder="email">
+					<input type="textarea" rows="2" cols="50" maxlength ="100" placeholder ="reminder" >
+			</fourm>
+		<div id="events">
+			<h3>Testing maps for event meetups</h3>
+			<br>
+  		<p style="font-size:20px; font-weight:bold">Conveniently Located At Brooklyn College! </p>
+  		<br>
+  		<iframe width="425" height="350" frameborder="4" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-73.96438121795656%2C40.62436016966133%2C-73.93605709075929%2C40.63924414903953&amp;layer=mapnik&amp;marker=40.631802574062505%2C-73.95021915435791" style="border: 1px solid black"></iframe><br/>
+
+			<p1 style="font-size:20px; font-weight:bold">Having Trouble Locating Yourself?  </p1> <br>
+  		<button  style="font-size:20px; font-weight:bold" onclick="getLocation()">Find Out Where You Are!</button>
+  		<p id="location"></p>
+
+			<script>
+				var x = document.getElementById("location");
+				function getLocation() {
+				  if (navigator.geolocation) {
+				    navigator.geolocation.getCurrentPosition(showPosition);
+				  }
+					else {
+				    x.innerHTML = "Geolocation is not supported by this browser.";
+				  }
+				}
+				function showPosition(position) {
+				  x.innerHTML = "Latitude: " + position.coords.latitude +
+				  "<br>Longitude: " + position.coords.longitude;
+				}
+			</script>
+		</div>
+		<div>
+			<p><button onclick="clickCounter()" type="button">Click me!</button></p>
+			<div id="result">
+			</div>
+			<br>
+			About You: <input type="text" id="about" onblur="myFunction()">
+			<script>
+				function myFunction() {
+					var x = document.getElementById("about");
+					x.value = x.value.toUpperCase();
+				}
+			</script>
+		</div>
+	</div>
+	<div class = "footer">
+		<p>Copyright sign</p>
+		<p>Contact us at
+			<ul>
+			<li><!--<a href ="#">-->Twitter</a></li>
+			<li><!--<a href ="#">-->facebook</a></li>
+			<li><!--<a href ="#">-->gmail</a></li>
+			<li><!--<a href ="#">-->something else</a></li>
+			</ul>
+		</p>
+	</div>
+</body>
+</main>
