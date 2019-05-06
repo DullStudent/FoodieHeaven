@@ -10,6 +10,7 @@
       border-radius: 0;
       background-color: #CBF6FF;
       font-weight: bold;
+	  font-size: 20px;
     }
 
     .navbar input[type=text] {

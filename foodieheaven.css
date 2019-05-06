@@ -10,15 +10,28 @@
       border-radius: 0;
       background-color: #CBF6FF;
       font-weight: bold;
+	  font-size: 19px;
     }
+	
+	li a:link {
+		color: Blue;
+	}
 
-    .navbar input[type=text] {
+	li a:hover {
+		color: Black;
+	}
+
+	li a:active {
+	  color: white;
+	}
+	
+	.navbar input[type=text] {
       float: left;
       padding: 6px;
       border: none;
       margin-top: 8px;
       margin-right: 20px;
-      font-size: 17px;
+      font-size: 20px;
     }
   /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
     .row.content {height: 100px}
@@ -35,16 +48,19 @@
       font: Bold;
       background-color: #ffffff;
       margin-top: 100px;
+	  font-size: 20px; 
     }
 
     .Today-Foodie {
       background-color: #ffffff;
       margin-top: 100px;
+	  font-size: 20px;
     }
 
     .Today-Foodie-Video {
       background-color: #ffffff;
       margin-top: 100px;
+	  font-size: 20px;
     }
 
     #reviews{
@@ -66,7 +82,8 @@
       color: black;
       padding: 15px 25px;
       text-align: center;
-      font-size: 16px;
+      font-size: 20px;
+	  font: bold;
       cursor: pointer;
     }
 
